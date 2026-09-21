@@ -1,10 +1,11 @@
 -- =========================================================
--- DATABASE SCHEMA: MAISON FASHION STORE
+-- DATABASE SCHEMA: NGUYEN FASHION STORE
 -- Compatible with MySQL 8.0+ / MariaDB / SQL Server
+-- Sinh viên thực hiện: Phan Nhất Nguyên - Lớp: ST23B
 -- =========================================================
 
-CREATE DATABASE IF NOT EXISTS maison_fashion CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE maison_fashion;
+CREATE DATABASE IF NOT EXISTS nguyen_fashion CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE nguyen_fashion;
 
 -- 1. USERS TABLE (Customers & Admins)
 CREATE TABLE IF NOT EXISTS users (
@@ -47,7 +48,7 @@ CREATE TABLE IF NOT EXISTS products (
     name VARCHAR(200) NOT NULL,
     slug VARCHAR(250) NOT NULL UNIQUE,
     category_id VARCHAR(36) NOT NULL,
-    brand VARCHAR(100) DEFAULT 'Maison',
+    brand VARCHAR(100) DEFAULT 'Nguyen',
     price DECIMAL(12, 2) NOT NULL,
     sale_price DECIMAL(12, 2) NULL,
     description TEXT,
@@ -237,7 +238,7 @@ CREATE TABLE IF NOT EXISTS banners (
 -- Password for admin: Admin@123456 (bcrypt hash: $2a$10$7R93WdM.Rz0dE99cE8rT.ev0Nl4iPZsmD6eU7y0vG8g1YfFh49wPq)
 -- Password for customer: Customer@123456
 INSERT INTO users (id, name, email, password_hash, phone, role, status) VALUES
-('user-admin-1', 'Quản Trị Viên', 'admin@example.com', '$2a$10$7R93WdM.Rz0dE99cE8rT.ev0Nl4iPZsmD6eU7y0vG8g1YfFh49wPq', '0901234567', 'ADMIN', 'ACTIVE')
+('user-admin-1', 'Phan Nhất Nguyên-ST23B', 'nguyen106436@donga.edu.vn', '$2a$10$7R93WdM.Rz0dE99cE8rT.ev0Nl4iPZsmD6eU7y0vG8g1YfFh49wPq', '0909123456', 'ADMIN', 'ACTIVE')
 ON DUPLICATE KEY UPDATE id=id;
 
 INSERT INTO admins (id, user_id, department) VALUES
