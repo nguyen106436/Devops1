@@ -32,18 +32,14 @@ export const CustomerRegisterPage: React.FC = () => {
         password,
       });
 
-      const user = res.user || res.data?.user;
-      const token = res.token || res.data?.token;
-
-      if (res.success && user && token) {
-        login(token, user);
-        success('Đăng ký tài khoản thành công! Chào mừng bạn gia nhập Nguyen.');
-        navigate('/', { replace: true });
+      if (res.success) {
+        success('Đăng ký tài khoản thành công! Vui lòng đăng nhập để tiếp tục.');
+        navigate('/login', { state: { email: email.trim() }, replace: true });
       } else {
         error(res.message || 'Lỗi đăng ký');
       }
     } catch (err: any) {
-      error(err.message || 'Email này đã được sử dụng');
+      error(err.message || 'Email này đã được sử dụng hoặc thông tin không hợp lệ');
     } finally {
       setLoading(false);
     }

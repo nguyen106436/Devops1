@@ -20,8 +20,8 @@ router.post('/register', async (req, res) => {
       return res.status(400).json({ success: false, message: 'Định dạng Email không hợp lệ' });
     }
 
-    if (password.length < 8) {
-      return res.status(400).json({ success: false, message: 'Mật khẩu phải chứa ít nhất 8 ký tự' });
+    if (password.length < 6) {
+      return res.status(400).json({ success: false, message: 'Mật khẩu phải chứa ít nhất 6 ký tự' });
     }
 
     if (confirmPassword && password !== confirmPassword) {

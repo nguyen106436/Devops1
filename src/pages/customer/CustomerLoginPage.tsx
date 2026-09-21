@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Mail, Lock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
@@ -11,9 +11,15 @@ export const CustomerLoginPage: React.FC = () => {
   const { login } = useAuth();
   const { success, error } = useNotification();
 
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState((location.state as any)?.email || '');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if ((location.state as any)?.email) {
+      setEmail((location.state as any).email);
+    }
+  }, [location.state]);
 
   const from = (location.state as any)?.from?.pathname || '/';
 
