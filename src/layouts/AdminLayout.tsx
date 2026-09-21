@@ -122,11 +122,11 @@ export const AdminLayout: React.FC = () => {
         <div className="h-20 px-6 border-b border-zinc-800 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-white text-zinc-950 flex items-center justify-center font-bold text-lg font-serif-title shadow-md">
-              M
+              N
             </div>
             <div>
               <span className="font-bold text-sm tracking-wider text-white uppercase block">
-                Maison Admin
+                Nguyen Admin
               </span>
               <span className="text-[10px] uppercase font-semibold text-emerald-400 flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Hệ thống quản trị

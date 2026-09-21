@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.get('/api/health', (_req: Request, res: Response) => {
   res.json({
     status: 'ok',
-    store: 'Maison Fashion E-Commerce',
+    store: 'Nguyen Fashion E-Commerce',
     environment: process.env.NODE_ENV || 'development',
     timestamp: new Date().toISOString(),
   });
@@ -86,7 +86,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`[Maison Fashion] Server running on http://0.0.0.0:${PORT}`);
+    console.log(`[Nguyen Fashion] Server running on http://0.0.0.0:${PORT}`);
   });
 }
 

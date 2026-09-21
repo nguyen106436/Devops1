@@ -89,7 +89,7 @@ export const CustomerLayout: React.FC = () => {
           <div className="flex-1 lg:flex-initial flex items-center justify-center lg:justify-start">
             <Link to="/" className="flex flex-col items-center lg:items-start group">
               <span className="font-serif-title text-2xl sm:text-3xl tracking-[0.2em] font-bold text-zinc-950 uppercase group-hover:tracking-[0.22em] transition-all">
-                MAISON
+                NGUYEN
               </span>
               <span className="text-[10px] tracking-[0.3em] font-medium text-zinc-400 uppercase -mt-1">
                 HAUTE COUTURE
@@ -373,7 +373,7 @@ export const CustomerLayout: React.FC = () => {
             <div className="lg:col-span-2 space-y-4">
               <Link to="/" className="inline-block">
                 <span className="font-serif-title text-2xl tracking-[0.2em] font-bold text-white uppercase">
-                  MAISON
+                  NGUYEN
                 </span>
                 <span className="block text-[10px] tracking-[0.3em] font-medium text-zinc-500 uppercase">
                   STUDIO VIETNAM
@@ -385,7 +385,7 @@ export const CustomerLayout: React.FC = () => {
               <div className="pt-2 text-xs space-y-1.5 text-zinc-400">
                 <p><strong className="text-zinc-200">Địa chỉ:</strong> 158 Đồng Khởi, Bến Nghé, Quận 1, TP. Hồ Chí Minh</p>
                 <p><strong className="text-zinc-200">Hotline:</strong> 1900 6868 (08:30 - 22:00)</p>
-                <p><strong className="text-zinc-200">Email:</strong> contact@maisonfashion.vn</p>
+                <p><strong className="text-zinc-200">Email:</strong> contact@nguyenfashion.vn</p>
               </div>
             </div>
 
@@ -421,7 +421,7 @@ export const CustomerLayout: React.FC = () => {
               <p className="text-xs text-zinc-400 mb-3 leading-relaxed">
                 Đăng ký để nhận voucher 50k và cập nhật các bộ sưu tập mới sớm nhất.
               </p>
-              <form onSubmit={e => { e.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận bản tin Maison!'); }} className="space-y-2">
+              <form onSubmit={e => { e.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận bản tin Nguyen!'); }} className="space-y-2">
                 <input
                   type="email"
                   required
@@ -440,7 +440,7 @@ export const CustomerLayout: React.FC = () => {
 
           {/* Copyright & Payment methods */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-            <p>© 2025 MAISON Fashion Studio Vietnam. Bảo lưu mọi quyền.</p>
+            <p>© 2025 NGUYEN Fashion Studio Vietnam. Bảo lưu mọi quyền.</p>
             <div className="flex items-center gap-4 text-zinc-400">
               <span>COD Tiền Mặt</span>
               <span>•</span>

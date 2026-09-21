@@ -18,7 +18,7 @@ export const ContactPage: React.FC = () => {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 space-y-12">
       <div className="text-center space-y-3 max-w-xl mx-auto">
         <h1 className="font-serif-title text-3xl sm:text-4xl font-bold text-zinc-950">
-          Liên Hệ Maison
+          Liên Hệ Nguyen
         </h1>
         <p className="text-xs sm:text-sm text-zinc-500">
           Chúng tôi luôn sẵn sàng lắng nghe mọi thắc mắc và đóng góp ý kiến từ quý khách
@@ -29,7 +29,7 @@ export const ContactPage: React.FC = () => {
         {/* Contact Info */}
         <div className="bg-zinc-950 text-white rounded-3xl p-8 space-y-8 shadow-xl">
           <div>
-            <h3 className="font-serif-title text-xl font-bold">Maison Flagship Showroom</h3>
+            <h3 className="font-serif-title text-xl font-bold">Nguyen Flagship Showroom</h3>
             <p className="text-xs text-zinc-400 mt-1">Trải nghiệm không gian mua sắm trực tiếp</p>
           </div>
 
@@ -54,7 +54,7 @@ export const ContactPage: React.FC = () => {
               <Mail className="w-4 h-4 text-zinc-400 mt-0.5" />
               <div>
                 <strong className="text-white block">Email chăm sóc khách hàng:</strong>
-                <p className="text-zinc-300">contact@maisonfashion.vn</p>
+                <p className="text-zinc-300">contact@nguyenfashion.vn</p>
               </div>
             </div>
 

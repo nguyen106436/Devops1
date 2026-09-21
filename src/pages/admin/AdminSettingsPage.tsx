@@ -6,16 +6,16 @@ import { useNotification } from '../../context/NotificationContext';
 
 export const AdminSettingsPage: React.FC = () => {
   const [settings, setSettings] = useState<StoreSettings>({
-    storeName: 'Maison Fashion Studio',
+    storeName: 'Nguyen Fashion Studio',
     phone: '1900 6868',
-    email: 'contact@maisonfashion.vn',
+    email: 'contact@nguyenfashion.vn',
     address: '158 Đồng Khởi, Bến Nghé, Quận 1, TP. Hồ Chí Minh',
     openingHours: '08:30 - 22:00 hàng ngày',
     shippingFeeStandard: 30000,
     freeShippingThreshold: 500000,
     bankName: 'Techcombank (Ngân hàng TMCP Kỹ thương Việt Nam)',
     bankAccountNumber: '19036888999888',
-    bankAccountName: 'CONG TY TNHH THOI TRANG MAISON VIETNAM',
+    bankAccountName: 'CONG TY TNHH THOI TRANG NGUYEN VIETNAM',
   });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);

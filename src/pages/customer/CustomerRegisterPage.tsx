@@ -34,7 +34,7 @@ export const CustomerRegisterPage: React.FC = () => {
 
       if (res.success && res.data) {
         login(res.data.token, res.data.user);
-        success('Đăng ký tài khoản thành công! Chào mừng bạn gia nhập Maison.');
+        success('Đăng ký tài khoản thành công! Chào mừng bạn gia nhập Nguyen.');
         navigate('/', { replace: true });
       } else {
         error(res.message || 'Lỗi đăng ký');
@@ -54,7 +54,7 @@ export const CustomerRegisterPage: React.FC = () => {
             Tạo Tài Khoản Mới
           </h1>
           <p className="text-xs text-zinc-500">
-            Trở thành hội viên Maison để tích lũy điểm và nhận ưu đãi độc quyền
+            Trở thành hội viên Nguyen để tích lũy điểm và nhận ưu đãi độc quyền
           </p>
         </div>
 

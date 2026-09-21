@@ -1343,15 +1343,15 @@
     }
   ],
   "settings": {
-    "storeName": "Maison Fashion Studio",
+    "storeName": "Nguyen Fashion Studio",
     "phone": "1900 6868",
-    "email": "contact@maisonfashion.vn",
+    "email": "contact@nguyenfashion.vn",
     "address": "158 Đồng Khởi, Bến Nghé, Quận 1, TP. Hồ Chí Minh",
     "openingHours": "08:30 - 22:00 (Tất cả các ngày trong tuần)",
     "shippingFeeStandard": 30000,
     "freeShippingThreshold": 500000,
     "bankName": "Vietcombank - Chi nhánh TP.HCM",
     "bankAccountNumber": "0071001234567",
-    "bankAccountName": "CONG TY TNHH MAISON FASHION VIET NAM"
+    "bankAccountName": "CONG TY TNHH NGUYEN FASHION VIET NAM"
   }
 }
