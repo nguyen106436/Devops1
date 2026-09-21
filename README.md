@@ -83,6 +83,36 @@
 
 ---
 
+## 🐳 Đóng Gói & Chạy Bằng Docker (DevOps Standard)
+
+> **Docker Hub Repository:** `nguyen20051/devops1`
+
+### 1. Khởi chạy nhanh bằng Docker Compose:
+```bash
+docker compose up -d
+```
+Ứng dụng sẽ tự động build và chạy trên cổng `http://localhost:3000`.
+
+### 2. Hoặc Build và Chạy Docker thủ công:
+```bash
+# Build image
+docker build -t nguyen20051/devops1:latest .
+
+# Chạy container
+docker run -d -p 3000:3000 --name nguyen_fashion nguyen20051/devops1:latest
+```
+
+### 3. Tự động hóa CI/CD lên Docker Hub qua GitHub Actions:
+Dự án đã tích hợp sẵn workflow CI/CD tại [`.github/workflows/docker.yml`](.github/workflows/docker.yml).
+Để kích hoạt tự động đẩy image lên Docker Hub mỗi khi push code:
+1. Vào GitHub repo: [https://github.com/nguyen106436/Devops1/settings/secrets/actions](https://github.com/nguyen106436/Devops1/settings/secrets/actions)
+2. Bấm **New repository secret** và thêm 2 secret:
+   * **`DOCKER_USERNAME`**: `nguyen20051`
+   * **`DOCKER_PASSWORD`**: Mật khẩu hoặc Personal Access Token từ Docker Hub của bạn.
+3. Mỗi khi có commit mới vào `main`, GitHub Actions sẽ tự động build và push image lên Docker Hub: **`nguyen20051/devops1:latest`**.
+
+---
+
 ## 🌟 Các Tính Năng Nổi Bật
 
 ### 🛒 Dành cho Khách Hàng:

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nguyen20051/devops1:latest
+    container_name: nguyen_fashion_app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - JWT_SECRET=nguyen-fashion-secret-key-2025
+    volumes:
+      - ./data:/app/data
