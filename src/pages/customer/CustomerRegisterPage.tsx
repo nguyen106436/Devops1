@@ -32,8 +32,11 @@ export const CustomerRegisterPage: React.FC = () => {
         password,
       });
 
-      if (res.success && res.data) {
-        login(res.data.token, res.data.user);
+      const user = res.user || res.data?.user;
+      const token = res.token || res.data?.token;
+
+      if (res.success && user && token) {
+        login(token, user);
         success('Đăng ký tài khoản thành công! Chào mừng bạn gia nhập Nguyen.');
         navigate('/', { replace: true });
       } else {

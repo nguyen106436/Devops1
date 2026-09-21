@@ -23,9 +23,12 @@ export const CustomerLoginPage: React.FC = () => {
 
     try {
       const res = await api.auth.login({ email: email.trim(), password });
-      if (res.success && res.data) {
-        login(res.data.token, res.data.user);
-        success(`Chào mừng bạn trở lại, ${res.data.user.name}!`);
+      const user = res.user || res.data?.user;
+      const token = res.token || res.data?.token;
+
+      if (res.success && user && token) {
+        login(token, user);
+        success(`Chào mừng bạn trở lại, ${user.name}!`);
         navigate(from, { replace: true });
       } else {
         error(res.message || 'Đăng nhập không thành công');
@@ -38,8 +41,8 @@ export const CustomerLoginPage: React.FC = () => {
   };
 
   const handleFillDemo = () => {
-    setEmail('customer@example.com');
-    setPassword('customer123');
+    setEmail('khachhang@example.com');
+    setPassword('Customer@123456');
   };
 
   return (

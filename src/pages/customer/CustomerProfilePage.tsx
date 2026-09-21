@@ -26,7 +26,7 @@ export const CustomerProfilePage: React.FC = () => {
     setSaving(true);
     try {
       const res = await api.auth.updateProfile({ name, phone, address });
-      if (res.success && res.data) {
+      if (res.success && (res.data || res.user)) {
         success('Cập nhật thông tin tài khoản thành công!');
       }
     } catch (err: any) {

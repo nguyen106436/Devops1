@@ -51,17 +51,23 @@ router.post('/register', async (req, res) => {
       { expiresIn: '7d' }
     );
 
+    const userPayload = {
+      id: newUser.id,
+      name: newUser.name,
+      email: newUser.email,
+      phone: newUser.phone,
+      role: newUser.role,
+      avatar: newUser.avatar,
+    };
+
     return res.status(201).json({
       success: true,
       message: 'Đăng ký tài khoản thành công',
       token,
-      user: {
-        id: newUser.id,
-        name: newUser.name,
-        email: newUser.email,
-        phone: newUser.phone,
-        role: newUser.role,
-        avatar: newUser.avatar,
+      user: userPayload,
+      data: {
+        token,
+        user: userPayload,
       },
     });
   } catch (error: any) {
@@ -98,17 +104,23 @@ router.post('/login', async (req, res) => {
       { expiresIn: '7d' }
     );
 
+    const userPayload = {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      phone: user.phone,
+      role: user.role,
+      avatar: user.avatar,
+    };
+
     return res.json({
       success: true,
       message: 'Đăng nhập thành công',
       token,
-      user: {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        phone: user.phone,
-        role: user.role,
-        avatar: user.avatar,
+      user: userPayload,
+      data: {
+        token,
+        user: userPayload,
       },
     });
   } catch (error: any) {
@@ -152,17 +164,23 @@ router.post('/admin-login', async (req, res) => {
       { expiresIn: '24h' }
     );
 
+    const userPayload = {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      phone: user.phone,
+      role: user.role,
+      avatar: user.avatar,
+    };
+
     return res.json({
       success: true,
       message: 'Xác thực Quản Trị Viên thành công',
       token,
-      user: {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        phone: user.phone,
-        role: user.role,
-        avatar: user.avatar,
+      user: userPayload,
+      data: {
+        token,
+        user: userPayload,
       },
     });
   } catch (error: any) {
@@ -205,17 +223,20 @@ router.put('/profile', authenticateToken, (req: AuthRequest, res: Response) => {
     return res.status(404).json({ success: false, message: 'Không tìm thấy người dùng' });
   }
 
+  const userPayload = {
+    id: updated.id,
+    name: updated.name,
+    email: updated.email,
+    phone: updated.phone,
+    role: updated.role,
+    avatar: updated.avatar,
+  };
+
   return res.json({
     success: true,
     message: 'Cập nhật thông tin thành công',
-    user: {
-      id: updated.id,
-      name: updated.name,
-      email: updated.email,
-      phone: updated.phone,
-      role: updated.role,
-      avatar: updated.avatar,
-    },
+    user: userPayload,
+    data: userPayload,
   });
 });
 
