@@ -36,5 +36,5 @@ jobs:
           file: ./Dockerfile
           push: "${{ env.DOCKER_PASSWORD != '' }}"
           tags: |
-            nguyen20051/devops1:latest
-            nguyen20051/devops1:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/devops1:latest
+            ${{ secrets.DOCKER_USERNAME }}/devops1:${{ github.sha }}

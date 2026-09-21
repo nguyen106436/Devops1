@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: nguyen20051/devops1:latest
+    image: admin212112/devops1:latest
     container_name: nguyen_fashion_app
     restart: unless-stopped
     ports:
